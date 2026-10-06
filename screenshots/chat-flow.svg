@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Training a bot and answering a question</text>
+
+  <!-- Training row -->
+  <text x="30" y="72" font-size="14" font-weight="700" fill="#0f172a">Training (queued job)</text>
+  <rect x="30" y="86" width="170" height="80" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="115" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#1e1b4b">1. Knowledge</text>
+  <text x="115" y="132" text-anchor="middle" font-size="12" fill="#1e1b4b">files, web pages,</text>
+  <text x="115" y="148" text-anchor="middle" font-size="12" fill="#1e1b4b">text, Q and A</text>
+
+  <rect x="225" y="86" width="170" height="80" rx="8" fill="#ecfdf5" stroke="#059669"/>
+  <text x="310" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#064e3b">2. Extract text</text>
+  <text x="310" y="132" text-anchor="middle" font-size="12" fill="#064e3b">PDF, Word, scraped</text>
+  <text x="310" y="148" text-anchor="middle" font-size="12" fill="#064e3b">pages, summaries</text>
+
+  <rect x="420" y="86" width="170" height="80" rx="8" fill="#ecfdf5" stroke="#059669"/>
+  <text x="505" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#064e3b">3. Split</text>
+  <text x="505" y="132" text-anchor="middle" font-size="12" fill="#064e3b">chunks with overlap,</text>
+  <text x="505" y="148" text-anchor="middle" font-size="12" fill="#064e3b">tiny ones dropped</text>
+
+  <rect x="615" y="86" width="170" height="80" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="700" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">4. Embed</text>
+  <text x="700" y="132" text-anchor="middle" font-size="12" fill="#4c1d95">OpenAI embeddings</text>
+  <text x="700" y="148" text-anchor="middle" font-size="12" fill="#4c1d95">for every chunk</text>
+
+  <rect x="810" y="86" width="160" height="80" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="890" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">5. Vector index</text>
+  <text x="890" y="132" text-anchor="middle" font-size="12" fill="#78350f">MongoDB Atlas,</text>
+  <text x="890" y="148" text-anchor="middle" font-size="12" fill="#78350f">progress to the app</text>
+
+  <line x1="200" y1="126" x2="221" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="395" y1="126" x2="416" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="590" y1="126" x2="611" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="785" y1="126" x2="806" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Answer row -->
+  <line x1="30" y1="205" x2="970" y2="205" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="30" y="236" font-size="14" font-weight="700" fill="#0f172a">Answering (per question)</text>
+
+  <rect x="30" y="250" width="170" height="80" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="115" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#1e1b4b">1. Question</text>
+  <text x="115" y="296" text-anchor="middle" font-size="12" fill="#1e1b4b">website, WhatsApp,</text>
+  <text x="115" y="312" text-anchor="middle" font-size="12" fill="#1e1b4b">Messenger, Instagram</text>
+
+  <rect x="225" y="250" width="170" height="80" rx="8" fill="#ecfdf5" stroke="#059669"/>
+  <text x="310" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#064e3b">2. Load the bot</text>
+  <text x="310" y="296" text-anchor="middle" font-size="12" fill="#064e3b">by ID, or by domain</text>
+  <text x="310" y="312" text-anchor="middle" font-size="12" fill="#064e3b">and URL slug</text>
+
+  <rect x="420" y="250" width="170" height="80" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="505" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">3. Embed and search</text>
+  <text x="505" y="296" text-anchor="middle" font-size="12" fill="#4c1d95">top matching chunks</text>
+  <text x="505" y="312" text-anchor="middle" font-size="12" fill="#4c1d95">from the vector index</text>
+
+  <rect x="615" y="250" width="170" height="80" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="700" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">4. OpenAI thread</text>
+  <text x="700" y="296" text-anchor="middle" font-size="12" fill="#4c1d95">context added, answer</text>
+  <text x="700" y="312" text-anchor="middle" font-size="12" fill="#4c1d95">streams back</text>
+
+  <rect x="810" y="250" width="160" height="80" rx="8" fill="#fce7f3" stroke="#db2777"/>
+  <text x="890" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">5. Log and act</text>
+  <text x="890" y="296" text-anchor="middle" font-size="12" fill="#831843">query, lead, location;</text>
+  <text x="890" y="312" text-anchor="middle" font-size="12" fill="#831843">tickets and bookings</text>
+
+  <line x1="200" y1="290" x2="221" y2="290" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="395" y1="290" x2="416" y2="290" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="590" y1="290" x2="611" y2="290" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="785" y1="290" x2="806" y2="290" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="30" y="380" width="940" height="130" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="500" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Other ways in</text>
+  <text x="500" y="436" text-anchor="middle" font-size="12" fill="#334155">Gmail: a Pub/Sub push triggers an auto-reply through the same answering path.</text>
+  <text x="500" y="458" text-anchor="middle" font-size="12" fill="#334155">Phone: Twilio call audio is bridged to the OpenAI Realtime API over a WebSocket, using the bot's instructions.</text>
+  <text x="500" y="480" text-anchor="middle" font-size="12" fill="#334155">Instagram and Messenger: comment and message rules can reply without a person.</text>
+</svg>

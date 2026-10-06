@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="640" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">AI Bot Studio backend: system architecture</text>
+
+  <!-- Clients -->
+  <rect x="30" y="80" width="190" height="56" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="125" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1e1b4b">Bot builder app</text>
+  <text x="125" y="122" text-anchor="middle" font-size="12" fill="#1e1b4b">owners and agencies</text>
+  <rect x="30" y="152" width="190" height="56" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="125" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#1e1b4b">Website embed</text>
+  <text x="125" y="194" text-anchor="middle" font-size="12" fill="#1e1b4b">page and widget</text>
+  <rect x="30" y="224" width="190" height="56" rx="8" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="125" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Messaging channels</text>
+  <text x="125" y="266" text-anchor="middle" font-size="12" fill="#713f12">WhatsApp, Messenger, Instagram</text>
+  <rect x="30" y="296" width="190" height="56" rx="8" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="125" y="320" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Gmail and phone</text>
+  <text x="125" y="338" text-anchor="middle" font-size="12" fill="#713f12">Pub/Sub push, Twilio calls</text>
+
+  <!-- NestJS API -->
+  <rect x="300" y="80" width="300" height="272" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="450" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#064e3b">NestJS API (TypeScript)</text>
+  <rect x="320" y="120" width="260" height="34" rx="6" fill="#ffffff" stroke="#059669"/>
+  <text x="450" y="142" text-anchor="middle" font-size="12" fill="#064e3b">Auth middleware and token checks</text>
+  <rect x="320" y="162" width="260" height="34" rx="6" fill="#ffffff" stroke="#059669"/>
+  <text x="450" y="184" text-anchor="middle" font-size="12" fill="#064e3b">Bots, knowledge, conversations, leads</text>
+  <rect x="320" y="204" width="260" height="34" rx="6" fill="#ffffff" stroke="#059669"/>
+  <text x="450" y="226" text-anchor="middle" font-size="12" fill="#064e3b">Channel modules and webhooks</text>
+  <rect x="320" y="246" width="260" height="34" rx="6" fill="#ffffff" stroke="#059669"/>
+  <text x="450" y="268" text-anchor="middle" font-size="12" fill="#064e3b">Socket.IO gateway, voice WebSocket</text>
+  <text x="450" y="306" text-anchor="middle" font-size="12" fill="#065f46">about 36 modules, 31 controllers</text>
+  <text x="450" y="326" text-anchor="middle" font-size="12" fill="#065f46">cron jobs: live status, SSL, Gmail watch</text>
+
+  <!-- Mongo -->
+  <rect x="690" y="80" width="280" height="86" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="830" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">MongoDB</text>
+  <text x="830" y="130" text-anchor="middle" font-size="12" fill="#78350f">bots, users, conversations, leads</text>
+  <text x="830" y="148" text-anchor="middle" font-size="12" fill="#78350f">about 35 collections</text>
+
+  <rect x="690" y="180" width="280" height="86" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="830" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">MongoDB Atlas (vector search)</text>
+  <text x="830" y="230" text-anchor="middle" font-size="12" fill="#78350f">embedded chunks of each bot's</text>
+  <text x="830" y="248" text-anchor="middle" font-size="12" fill="#78350f">knowledge</text>
+
+  <rect x="690" y="280" width="280" height="72" rx="10" fill="#fef3c7" stroke="#d97706"/>
+  <text x="830" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Object storage (Wasabi)</text>
+  <text x="830" y="330" text-anchor="middle" font-size="12" fill="#78350f">uploaded files and images</text>
+
+  <!-- Queues -->
+  <rect x="300" y="410" width="300" height="100" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="450" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#831843">BullMQ queues (Redis)</text>
+  <text x="450" y="462" text-anchor="middle" font-size="12" fill="#831843">bot training, 20 jobs at a time</text>
+  <text x="450" y="480" text-anchor="middle" font-size="12" fill="#831843">page scraping (headless browser)</text>
+  <text x="450" y="498" text-anchor="middle" font-size="12" fill="#831843">file text extraction</text>
+
+  <!-- OpenAI -->
+  <rect x="690" y="410" width="280" height="100" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="830" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#4c1d95">OpenAI</text>
+  <text x="830" y="462" text-anchor="middle" font-size="12" fill="#4c1d95">assistants and threads, chat</text>
+  <text x="830" y="480" text-anchor="middle" font-size="12" fill="#4c1d95">embeddings, realtime voice</text>
+  <text x="830" y="498" text-anchor="middle" font-size="12" fill="#4c1d95">platform key or the user's own key</text>
+
+  <!-- Integrations -->
+  <rect x="30" y="410" width="220" height="100" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="140" y="438" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Other services</text>
+  <text x="140" y="462" text-anchor="middle" font-size="12" fill="#334155">Global Control (email, tags)</text>
+  <text x="140" y="480" text-anchor="middle" font-size="12" fill="#334155">Freshdesk, Calendly, Square</text>
+  <text x="140" y="498" text-anchor="middle" font-size="12" fill="#334155">SaaSOnboard provisioning</text>
+
+  <text x="500" y="570" text-anchor="middle" font-size="12" fill="#475569">Arrows show the main direction of calls, not every link.</text>
+
+  <!-- arrows -->
+  <line x1="220" y1="108" x2="296" y2="150" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="220" y1="180" x2="296" y2="180" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="220" y1="252" x2="296" y2="222" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="220" y1="324" x2="296" y2="266" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="600" y1="123" x2="686" y2="123" stroke="#475569" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="600" y1="200" x2="686" y2="222" stroke="#475569" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="600" y1="320" x2="686" y2="316" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="450" y1="352" x2="450" y2="406" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="600" y1="460" x2="686" y2="460" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="320" y1="352" x2="200" y2="406" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Data model by domain (main collections)</text>
+  <text x="500" y="56" text-anchor="middle" font-size="12" fill="#475569">Links are stored as string IDs. Records use soft delete.</text>
+
+  <rect x="380" y="80" width="240" height="110" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="500" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#1e1b4b">Identity</text>
+  <text x="500" y="130" text-anchor="middle" font-size="12" fill="#1e1b4b">users (access level, parent client)</text>
+  <text x="500" y="148" text-anchor="middle" font-size="12" fill="#1e1b4b">access tokens</text>
+  <text x="500" y="166" text-anchor="middle" font-size="12" fill="#1e1b4b">user-supplied API keys (encrypted)</text>
+
+  <rect x="365" y="240" width="270" height="130" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="500" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#064e3b">Bots</text>
+  <text x="500" y="290" text-anchor="middle" font-size="12" fill="#064e3b">chatbots (styling, training state,</text>
+  <text x="500" y="308" text-anchor="middle" font-size="12" fill="#064e3b">channel and integration settings)</text>
+  <text x="500" y="326" text-anchor="middle" font-size="12" fill="#064e3b">bot groups, domains, tags</text>
+  <text x="500" y="344" text-anchor="middle" font-size="12" fill="#064e3b">assistant library</text>
+
+  <rect x="30" y="240" width="270" height="130" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="165" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">Knowledge</text>
+  <text x="165" y="290" text-anchor="middle" font-size="12" fill="#78350f">user files (text, status)</text>
+  <text x="165" y="308" text-anchor="middle" font-size="12" fill="#78350f">site URLs (scraped pages, summaries)</text>
+  <text x="165" y="326" text-anchor="middle" font-size="12" fill="#78350f">embeddings (Atlas connection)</text>
+
+  <rect x="700" y="240" width="270" height="130" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="835" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#831843">Conversations</text>
+  <text x="835" y="290" text-anchor="middle" font-size="12" fill="#831843">conversations, messages</text>
+  <text x="835" y="308" text-anchor="middle" font-size="12" fill="#831843">queries (question, answer, outcome)</text>
+  <text x="835" y="326" text-anchor="middle" font-size="12" fill="#831843">leads, statistics, notifications</text>
+
+  <rect x="30" y="430" width="440" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="250" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#4c1d95">Channels</text>
+  <text x="250" y="480" text-anchor="middle" font-size="12" fill="#4c1d95">WhatsApp Business, Messenger, Instagram</text>
+  <text x="250" y="498" text-anchor="middle" font-size="12" fill="#4c1d95">Gmail and processed emails, Freshdesk</text>
+  <text x="250" y="516" text-anchor="middle" font-size="12" fill="#4c1d95">Instagram and Messenger automation rules</text>
+
+  <rect x="530" y="430" width="440" height="120" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="750" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Other</text>
+  <text x="750" y="480" text-anchor="middle" font-size="12" fill="#334155">Global Control tag fire records</text>
+  <text x="750" y="498" text-anchor="middle" font-size="12" fill="#334155">user learning progress</text>
+
+  <line x1="500" y1="190" x2="500" y2="236" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="365" y1="305" x2="304" y2="305" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="635" y1="305" x2="696" y2="305" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="440" y1="370" x2="330" y2="426" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="580" y1="370" x2="650" y2="426" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>
