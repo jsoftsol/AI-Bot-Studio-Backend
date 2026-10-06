@@ -1,6 +1,6 @@
 # AI Bot Studio Backend
 
-Documentation for the backend of AI Bot Studio, a platform for building AI chat bots that answer from a business's own content and talk to customers on a website, WhatsApp, Messenger, Instagram, Gmail and by phone.
+Documentation for the backend of AI Bot Studio, a platform for building AI chat bots that answer from a business's own content and talk to customers on a website, WhatsApp, Messenger, Instagram, Gmail and by phone. The apps that use this API are documented in [AI-Bot-Studio-Frontend](https://github.com/jsoftsol/AI-Bot-Studio-Frontend) (the builder) and [AI-Bot-Studio-Public](https://github.com/jsoftsol/AI-Bot-Studio-Public) (the visitor chat and embeddable widget).
 
 > **The source code is not included in this repository.** This is client work and the code is proprietary. This repo only holds documentation: this README, a reverse-engineered product spec ([PRD.md](PRD.md)), and three diagrams in `screenshots/`. Everything here was written from a read-through of the actual codebase. Credentials, hostnames and security specifics are left out on purpose.
 
